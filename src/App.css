@@ -1,0 +1,374 @@
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding-top: 80px; /* Adjust for header height */
+}
+
+/* Container for centering content */
+.container {
+  width: 100%;
+  /* max-width: 1200px; */
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Login Container */
+.login-container {
+  width: 100%;
+  max-width: 600px;
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+  text-align: center;
+  margin-top: 50px
+}
+
+/* Heading */
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+}
+
+/* Input Group */
+.input-group {
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.input-group label {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.input-group input.form-control {
+  width: 100%;
+  padding: 12px;
+  margin-top: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  color: #333;
+  background-color: white;
+}
+
+.input-group input.form-control:focus {
+  outline: none;
+  border-color: #333;
+}
+
+/* Button */
+ form button.btn {
+  width: 80%;
+  padding: 12px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-left:10px;
+  
+}
+
+button.btn:hover {
+  background-color: #555;
+}
+
+/* Error Message */
+.error {
+  color: red;
+  margin-top: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .login-container {
+    width: 90%;
+    padding: 20px;
+    margin-top:50px;
+  }
+  
+  h2 {
+    font-size: 1.8rem;
+  }
+}
+
+
+/* Header */
+/* Header */
+nav{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #333; /* Dark background color */
+  color: white;
+  padding: 15px 20px; /* Increased padding for better spacing */
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for header */
+  border-bottom: 2px solid #ddd; /* Border at the bottom of the header */
+  display: flex;
+  justify-content: space-evenly;
+  gap:20px;
+}
+
+nav Link {
+  list-style: none;
+  display: flex;
+  justify-content: flex-start; /* Adjusted to align links to the left */
+  align-items: center;
+  margin: 0;
+}
+
+ nav Link {
+  margin: 0 20px; /* Increased margin for spacing between links/buttons */
+}
+
+ nav Link ,
+ nav Link button {
+  color: white;
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: bold; /* Bold text */
+}
+button{
+  margin-left:70px;
+}
+
+ nav Link:hover,
+ nav Link button:hover {
+  text-decoration: underline;
+  background-color: #555; /* Highlight background color on hover */
+}
+
+/* Login Page */
+.login {
+  max-width: 400px;
+  width: 100%;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  text-align: center;
+  border: 1px solid #ddd; /* Border for the login form */
+}
+
+.login input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.login button {
+  width: 100%;
+  padding: 10px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.login button:hover {
+  background-color: #555;
+}
+
+/* Home */
+
+ .product{
+  padding: 1rem;
+    align-items: center;
+  flex-wrap: wrap;
+ }
+ .product-title{
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+   flex-wrap: wrap;
+
+ }
+
+ .product-item{
+  display: grid;
+        grid-template-columns: repeat(3 , 1fr);
+        gap: 1rem;
+        flex-wrap:wrap;
+ }
+
+@media (max-width: 978px) {
+  .product-title{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin-top: 0;
+    flex-wrap: wrap;
+  }
+  .product-item{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+}
+
+
+/* Product Detail */
+.product-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px 0;
+}
+
+.product-detail img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.product-detail h1 {
+  font-size: 2rem;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.product-detail button {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.product-detail button:hover {
+  background-color: #555;
+}
+
+/* Cart Page */
+.cart-container {
+  max-width: 600px;
+  margin: 100px auto 50px auto; /* centered with top space from header */
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.cart-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.cart-title {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.cart-input {
+  width: 80px;
+  padding: 8px;
+  margin-bottom: 0.5rem;
+}
+
+.remove-btn {
+  background-color: #ff4d4f;
+  color: white;
+  padding: 8px 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  align-items: center;
+  margin-left:3px
+}
+
+.remove-btn:hover {
+  background-color: #ff1a1a;
+}
+
+.total {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+}
+
+.checkout-btn {
+  margin-top: 1rem;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left:3px
+
+}
+
+.checkout-btn:hover {
+  background-color: #555;
+}
+
+.popup {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .cart-container {
+    padding: 1rem;
+    margin: 80px 1rem 40px 1rem;
+  }
+
+  .cart-item {
+    align-items: flex-start;
+  }
+
+  .cart-input {
+    width: 100%;
+  }
+
+  .remove-btn {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+}
