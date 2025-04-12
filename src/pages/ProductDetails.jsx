@@ -17,13 +17,13 @@ const ProductDetail = () => {
   if (!product) return <p>Loading product...</p>;
 
   return (
-    <div style={{ padding: '1rem' }}>
-      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '2rem' }}>
-        <img src={product.image} alt={product.title} style={{ width: '250px', objectFit: 'contain' }} />
+    <div style={{ padding: '1rem'  }}>
+      <div style={{ display: 'flex', justifyContent:'center', alignItems:'center', flexWrap: 'wrap', gap: '2rem' }}>
+        <img src={product.image} alt={product.title} style={{ width: '250px', height:'400px', objectFit: 'contain' }} />
         <div>
           <h2>{product.title}</h2>
           <p>{product.description}</p>
-          <h3>${product.price}</h3>
+          <h3 style={{color:'green'}}>${product.price}</h3>
           <button
             onClick={() => addToCart(product)}
             style={{
@@ -31,8 +31,11 @@ const ProductDetail = () => {
               backgroundColor: '#28a745',
               color: 'white',
               border: 'none',
-              borderRadius: '5px',
-              cursor: 'pointer'
+              borderRadius: '30px',
+              cursor: 'pointer',
+              display: 'flex', 
+              justifyContent:'center',
+               alignItems:'center'
             }}
           >
             Add to Cart
